@@ -1,12 +1,12 @@
-var hoursHand = document.querySelector('.hours-hand');
-var minutesHand = document.querySelector('.minutes-hand');
-var secondsHand = document.querySelector('.seconds-hand');
+const hoursHand = document.querySelector('.hours-hand');
+const minutesHand = document.querySelector('.minutes-hand');
+const secondsHand = document.querySelector('.seconds-hand');
 
-function getDegres(division, n) {
+const getDegres = (division, n) => {
     return 'rotate(' + ((n / division) * 360 + 90) + 'deg)';
 }
 
-function getTime() {
+const getTime = () => {
     var date = new Date();
     secondsHand.style.transform = getDegres(60, date.getSeconds());
     minutesHand.style.transform = getDegres(60, date.getMinutes());
